@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
-   
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
-  <title>EXERCICE JQUERY</title>
+<title>le DOM - jQuery - 1</title>
+	<link href="style.css" rel="stylesheet" media="all" type="text/css">
+        <meta charset="utf-8"/>
 </head>
 <body>
-  <header>
-    <h1>MATRICE CHANGEMENT DE COULEUR</h1>
-  </header>
-      
-  <section class="grid-container"> 
-    <div class="grid-item1 row0 col0"></div>
-    <div class="grid-item row0 col1"></div>
-    <div class="grid-item row0 col2"></div>
-    <div class="grid-item row0 col3"></div>
-    <div class="grid-item row0 col4"></div>  
-<!--row0 -->
-    <div class="grid-item row1 col0"></div>
-    <div class="grid-item2 row1 col1"></div>
-    <div class="grid-item row1 col2"></div>
-    <div class="grid-item row1 col3"></div>
-    <div class="grid-item row1 col4"></div> 
-<!--row1-->
-    <div class="grid-item row2 col0"></div>
-    <div class="grid-item row2 col1"></div>
-    <div class="grid-item3 row2 col2"></div>
-    <div class="grid-item row2 col3"></div>
-    <div class="grid-item row2 col4"></div>  
-<!--row2 -->
-    <div class="grid-item row3 col0"></div>
-    <div class="grid-item row3 col1"></div>
-    <div class="grid-item row3 col2"></div>
-    <div class="grid-item4 row3 col3"></div>
-    <div class="grid-item row3 col4"></div> 
-<!--row3 -->
-    <div class="grid-item row4 col0"></div>
-    <div class="grid-item row4 col1"></div>
-    <div class="grid-item row4 col2"></div>
-    <div class="grid-item row4 col3"></div>
-    <div class="grid-item5 row4 col4"></div> 
- <!--row4 -->   
-    </div>
-     <br>
-    <button class="on">Activer</button>
-     <br>
-    <button class="off">Désactiver</button>
-  </section>
-    <script type="text/javascript" src="script.js"></script>
+<div class="wrapper">
+	<div class="division col50">
+		<a target="_blank" href="https://fr.lipsum.com/" rel="popup" class="extlink" id="extlink">Lorem Ipsum</a>
+		<p>
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		</p>
+		<a target="_blank" href="http://google.fr" rel="popup" class="extlink"  id="w3">w3schools</a>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+
+	<div class="division col100">
+
+		<button class="btnjs" id="test" onclick="move()">Test</button>
+		<button class="btnjs" id="test2" onclick="moveT2()">Test2</button>
+		<input type="text" name="testeur" id="testeur" onkeyup="Myfunction()">
+		<br>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+
+	</div>
+</div>
+<div class="exo">
+	<p>
+		Exercice évolutif. Vous ne devez travailler que sur le fichier js, sans rien modifier au fichier HTML.
+		<ol>
+			<li>Lorsque je clique sur le bouton Test, la liste située sous le premier paragraphe n'a plus de puce. (Uniquement cette liste, pas la deuxième !)</li>
+			<li>En utilisant un IF, faites en sorte qu'à chaque fois que l'on clique sur le bouton Test les puces s'enlèvent ou se mettent en fonction de leur état actuel.</li>
+			<li>Le bouton Test2 doit retirer ou mettre les puces sur les DEUX listes en fonction de leur état actuel.</li>
+			<li>Le bouton Test2 doit supprimer ou ajouter les puces en foonctions de l'état de chaque liste. Pour la liste 1 il doit uniquement mettre ou enlever les puces. Pour la liste 2 il doit enlever les puces ET enlever le padding-left, ou l'inverse.</li>
+			<li>En utilisant un switch <br />
+				Lorsque vous rentrez le mot oui (ou o, peut importe la casse), les deux div se retrouvent avec un fond vert clair. <br />
+				Lorsque vous rentrez le mot non (ou n, peut importe la casse), les deux div se retrouvent avec un fond rouge clair. <br />
+				Lorsque vous rentrer une suite de [10-20]caractères alors ce texte se retrouve à la place du lorem ipsum. Lorsque ce n'est plus le cas, le lorem ipsum doit revenir <br />
+				Lorsque vous rentrez moins de 10 caractère, que vous commencez par une majuscule et que vous finissez par un chiffre, alors le contenu du lien en haut de page devient "Wikipédia : la saisie" et le lien devra renvoyer vers une recherche Wikipédia concernant votre saisie.</li>
+			<li>Bonus : corriger l'adresse à laquelle renvoie le lien w3school.</li>
+		</ol>
+	</p>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

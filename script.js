@@ -1,104 +1,70 @@
-$(document).ready(function(){
-  $(".on").click(function(){
+function move(){ 
+	    $(".col50 ul").css("list-style-type","none"); 
+	}
 
-   $("div").addClass("active");
-   
-  });
-});
+function move(){ 
+	var array; 
+	if (!array){ 
+    	$(".col50 ul").css("list-style-type","none"); 
+    	array = true; 
+  	}
 
-$(document).ready(function(){
-  $(".grid-item").click(function(){
-   
-    if ($(this).hasClass("active"))
-    {
-      $(this).removeClass("active");
+	else{ 
+		$(".col50 ul").css("list-style-type","disc"); 
+		array = false;
+		
+	}
+
+
+        $(".col50 ul").toggleClass("notype");
     }
-    else
-    {
-      $(this).addClass("active");
-    }
-  });  
-});
 
-$(document).ready(function(){
-  $(".off").click(function(){
-   
-   $("div").removeClass("active");
-    
-  });
- });
+function move(){ 
+	    $(".col50 ul").toggleClass("notype");
+}
 
-$(document).ready(function(){
+function moveT2(){
+	    $("ul").toggleClass("notype");
 
- $(".grid-item1").click(function(){
-   
-    if ($(this).hasClass("active") && $(".row0").hasClass("active"))
-    {
-      $(this).removeClass("active") && $(".row0").removeClass("active") ;
-    }
-    else
-    {
-      $(this).addClass("active") && $(".row0").addClass("active");
-    }
-  });
-});
+        $(".col100 ul").toggleClass("notype nopad"); 
 
-$(document).ready(function(){
+}
+        $("#w3").attr("href","http://w3schools.com");
 
- $(".grid-item2").click(function(){
-   
-    if ($(this).hasClass("active") && $(".row1").hasClass("active"))
-    {
-      $(this).removeClass("active") && $(".row1").removeClass("active");
-    }
-    else
-    {
-      $(this).addClass("active") && $(".row1").addClass("active");
-    }
-  });
-});
+		var str; 
+		var lorem = $(".division>p").text(); 
+		function Myfunction(){ 
+			console.log($("#testeur").val()); 
+			str = $("#testeur").val(); 
+			switch (true){ 
 
-$(document).ready(function(){
+				default:
+					$(".division").removeClass("bgred");
+					$(".division").removeClass("bgvert");
+					$(".division>p").text(lorem); 
+					console.log("default case");
+					break;
+				case ((/(\boui\b)|(\bo\b)/i).test(str)): 
+					$(".division").addClass("bgvert"); 
+					console.log('bgvert');
+					break;
+				case ((/(\bnon\b)|(\bn\b)/i).test(str)): 
+					$(".division").addClass("bgred"); 
+					console.log('bgred'); 
+					break;
+				case ((/^[a-zA-Z0-9]{10,20}$/i).test(str)): 
+					$(".division>p").text(str); 
+					$(".division").removeClass("bgred"); 
+					$(".division").removeClass("bgvert"); 
+					console.log(lorem); 
+					break;
+				case ((/[A-Z]{1}.{0,7}[0-9]{1}/).test(str)): 
+					$("#extlink").text(str); 
+					$("#extlink").attr("href","https://fr.wikipedia.org/wiki/"+str);
+					console.log("Test regex");
+					break;
 
- $(".grid-item3").click(function(){
-   
-    if ($(this).hasClass("active") && $(".row2").hasClass("active")&& $(".col2").hasClass("active"))
-    {
-      $(this).removeClass("active") && $(".row2").removeClass("active") && $(".col2").removeClass("active");
-    }
-    else
-    {
-      $(this).addClass("active") && $(".row2").addClass("active") && $(".col2").addClass("active");
-    }
-  });
-});
+				
 
-$(document).ready(function(){
-
- $(".grid-item4").click(function(){
-   
-    if ($(this).hasClass("active") && $(".row3").hasClass("active"))
-    {
-      $(this).removeClass("active") && $(".row3").removeClass("active") ;
-    }
-    else
-    {
-      $(this).addClass("active") && $(".row3").addClass("active");
-    }
-  });
-});
-
-$(document).ready(function(){
-
- $(".grid-item5").click(function(){
-   
-    if ($(this).hasClass("active") && $(".row4").hasClass("active"))
-    {
-      $(this).removeClass("active") && $(".row4").removeClass("active") ;
-    }
-    else
-    {
-      $(this).addClass("active") && $(".row4").addClass("active");
-    }
-  });
-});
+			} 
+		}
